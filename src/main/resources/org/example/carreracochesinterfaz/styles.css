@@ -1,0 +1,11 @@
+.coche {
+    -fx-background-color: #444444;
+    -fx-padding: 10 10 10 10;
+
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#pantalla_carrera {
+    -fx-background-image: url("");
+}
