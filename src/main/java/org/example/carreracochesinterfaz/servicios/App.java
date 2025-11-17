@@ -11,8 +11,8 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/org/example/carreracochesinterfaz/Carrera.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 400, 800);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 600, 800);
+        stage.setTitle("Mario Kart");
         stage.setScene(scene);
         stage.show();
     }

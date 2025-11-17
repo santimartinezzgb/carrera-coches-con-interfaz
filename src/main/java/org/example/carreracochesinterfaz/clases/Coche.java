@@ -43,6 +43,7 @@ public class Coche extends Thread{
             // Avance
             if (velocidad > 250) {
                 carretera.add("================");
+
                 distanciaRecorrida += 10;
             } else if (velocidad > 150){
                 carretera.add("========");
