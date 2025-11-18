@@ -132,17 +132,40 @@ La diferencia principal respecto al programa de terminal, fue el tener que garan
     
     \textit{Solución:} Uso obligatorio de \texttt{Platform.runLater()}
     
-    \item \textbf{Sincronización del orden de llegada} 
+    \item \textbf{Variable expected} 
     
-    \textit{Solución:} Clase \texttt{Carrera} con contador atómico y lista ordenada
+    El problema que más me ha llevado tiempo del programa. Estoy escribiendo esto sin todavía haber llegado a una solución, así que se va a mostrar a continuación una captura del mismo:
+    \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[height=7cm]{images/variable-expected.png}
+        \end{center}
+    \end{figure}
+
+    \textbf{Solución 1:} Se estaba intentando asignar un valor al resultado de un método, no a una variable; además de utilizar un getter y no un setter para añadir un valor. De ahí el primer fallo.
+
+    \vspace{0.5cm}
+    \textbf{Solución final:} No pude implementar lo que quería, que era un objeto Image a través de setUrl(), pero como ese método no existe en el objeto Image, debido a que no puede modificarse, cambié de rumbo en la idea que tenía en esta parte del programa.
     
-    \item \textbf{Botón clickable durante la carrera}
+    \newpage
+    \item \textbf{Return de ordenDeLlegada en clase Carrera}: El problema fue que sin razón aparente, el método ordenDeLlegada(), necesario para que devuelva ese orden y trabajar con ese dato en la UI, se devolvía de dos en dos.
+    \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[height=7cm]{images/return-ordenDeLlegada().png}
+        \end{center}
+        \caption{Devuelve: 2, 4, 6, 8, 10}
+    \end{figure}    
     
-    \textit{Solución:} Deshabilitar el botón y usar \texttt{join()} en hilo auxiliar para reactivarlo al final
+    \textit{Solución:} Problema con mútliples llamadas al método en la clase \textbf{Coche}.
+    \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[height=5cm]{images/solucion-ordenDeLlegada.png}
+        \end{center}
+    \end{figure}  
     
-    \item \textbf{Exceso de salida en consola}
-    
-    \textit{Solución:} Comentada en versión final para mejor experiencia de usuario
+    Al realizar controles por terminal, se utilizó un System.out para comprobar qué número devolvía, sin darme cuenta que ese mismo control de errores causaba el error.
+
+    Esto provocaba la suma doble del contador, debido a que ya se había llamado con anterioridad al método para modificar el texto de otro campo.
+
 \end{enumerate}
 
 % ========================== CONCLUSIÓN ==========================

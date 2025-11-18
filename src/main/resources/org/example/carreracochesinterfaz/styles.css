@@ -1,44 +1,15 @@
-.coche {
-    -fx-padding: 10 10 10 10;
+.colecciones {
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
-
-}
-
-#Mario {
-    -fx-background-color: red;
-        -fx-text-fill: white;
-}
-#Luigi {
-    -fx-background-color: green;
-    -fx-text-fill: white;
-}
-#Peach {
-    -fx-text-fill: black;
-    -fx-background-color: pink;
-}
-#Toad {
-    -fx-background-color: blue;
-    -fx-text-fill: white;
-}
-#Bowser {
-    -fx-background-color: orange;
-    -fx-text-fill: white;
 }
 
 #pantalla {
     -fx-background-image: url("images/fondo.jpg");
 }
 
-#salida {
--fx-font-size: 12pt;
-    -fx-font-weight: bold;
-    -fx-text-fill: darkblue;
-
-}
-
-#meta {
-    -fx-font-size: 12pt;
-    -fx-font-weight: bold;
-    -fx-text-fill: darkred;
-
+#pantalla_carrera{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-size: 25;
+    -fx-border-color: blue;
 }

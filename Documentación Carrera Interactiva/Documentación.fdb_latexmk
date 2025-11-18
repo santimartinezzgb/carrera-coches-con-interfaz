@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1763470647.1959 "/home/santi/Escritorio/carrera-coches-con-interfaz/Documentación Carrera Interactiva/Documentación.tex" "Documentación.pdf" "Documentación" 1763470647.53997 0
+["pdflatex"] 1763496635.82425 "/home/santi/Escritorio/carrera-coches-con-interfaz/Documentación Carrera Interactiva/Documentación.tex" "Documentación.pdf" "Documentación" 1763496636.21421 0
   "/etc/texmf/web2c/texmf.cnf" 1761766874.02204 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/santi/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1200.600pk" 1763470619.80414 15056 6402b2c3556681222c7320cb1cb40789 ""
   "/home/santi/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1761766926.72509 14040 beb151d381894794eebdf73e5272625b ""
-  "/home/santi/Escritorio/carrera-coches-con-interfaz/Documentación Carrera Interactiva/Documentación.tex" 1763470647.03913 7559 a1af125f3dc3bff1f5e31e4d15731817 ""
+  "/home/santi/Escritorio/carrera-coches-con-interfaz/Documentación Carrera Interactiva/Documentación.tex" 1763496635.66231 9021 51b39347b114fa732fa0e49c3c05fa06 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcbx1200.tfm" 1136768653 1536 c09172c8f235393e6235bb4758357c41 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -138,10 +138,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761766878.35125 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1763330460 6822806 2e7ad94891dc194d37643af971df125d ""
-  "Documentación.aux" 1763470647.49526 1066 59b173d080878c04a33151169eabe2c9 "pdflatex"
-  "Documentación.out" 1763470647.49626 931 f545ad6ba045198b9b550947a1fb9320 "pdflatex"
-  "Documentación.tex" 1763470647.03913 7559 a1af125f3dc3bff1f5e31e4d15731817 ""
-  "Documentación.toc" 1763470647.49663 516 7182d458e8d7398e06d8662e7b4c66b2 "pdflatex"
+  "Documentación.aux" 1763496636.17033 1202 dfaf3fa48eb5bfc58ee7096bed850c49 "pdflatex"
+  "Documentación.out" 1763496636.17133 931 f545ad6ba045198b9b550947a1fb9320 "pdflatex"
+  "Documentación.tex" 1763496635.66231 9021 51b39347b114fa732fa0e49c3c05fa06 ""
+  "Documentación.toc" 1763496636.17188 516 e64b1737474abe7d10a7bdcf684dc1e0 "pdflatex"
   "images/bowser.jpg" 1763465640.2657 38643 23a8cf0e9594f6eb8f2e78a73c3d4579 ""
   "images/bronce.png" 1763470460.47248 79443 354f684109d69d200396767695ae1bfa ""
   "images/goomba.png" 1763470466.01154 127238 f6c3723e1bd25b8570f1fc5feed10173 ""
@@ -151,7 +151,10 @@
   "images/oro.png" 1763470453.54576 472397 c66f17870a343ccaf72b1f44403dddba ""
   "images/peach.jpg" 1763465637.27908 51052 5e3e0f37d9ef88c45021d26db72653f7 ""
   "images/plata.png" 1763470483.44254 626257 62498d632bdc384cfa03de384c9cb2f8 ""
+  "images/return-ordenDeLlegada().png" 1763495216.34393 32375 b544a8dc7573176931205bc54a11f627 ""
+  "images/solucion-ordenDeLlegada.png" 1763496448.12453 33552 f51f12161a719b464e34c05966c2c4ea ""
   "images/toad.jpg" 1763465642.89587 66899 9a7f5ac8308b1ca68d9ad27b7394a970 ""
+  "images/variable-expected.png" 1763489333.33409 13149 d599ff35405bf771554119d2add8af04 ""
   (generated)
   "Documentación.aux"
   "Documentación.log"

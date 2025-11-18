@@ -3,6 +3,7 @@ package org.example.carreracochesinterfaz.Controladores;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.example.carreracochesinterfaz.clases.Carrera;
 import org.example.carreracochesinterfaz.clases.Coche;
@@ -24,15 +25,15 @@ public class ControladorCarrera {
     private Label recorrido5;
 
     @FXML
-    private ImageView posicionMario;
+    private Label resultado1;
     @FXML
-    private ImageView posicionLuigi;
+    private Label resultado2;
     @FXML
-    private ImageView posicionBowser;
+    private Label resultado3;
     @FXML
-    private ImageView posicionToad;
+    private Label resultado4;
     @FXML
-    private ImageView posicionPeach;
+    private Label resultado5;
 
 
     @FXML
@@ -43,21 +44,17 @@ public class ControladorCarrera {
         btn_iniciar.setDisable(true);
         btn_iniciar.setText("CARRERA EN CURSO...");
 
-
-        Coche coche1 = new Coche("Mario", carrera, recorrido1, posicionMario);
-        Coche coche2 = new Coche("Luigi", carrera, recorrido2, posicionLuigi);
-        Coche coche3 = new Coche("Bowser", carrera, recorrido3, posicionBowser);
-        Coche coche4 = new Coche("Toad", carrera, recorrido4, posicionToad);
-        Coche coche5 = new Coche("Peach", carrera, recorrido5, posicionPeach);
-
+        Coche coche1 = new Coche("Mario", carrera, recorrido1, resultado1);
+        Coche coche2 = new Coche("Luigi", carrera, recorrido2, resultado2);
+        Coche coche3 = new Coche("Bowser", carrera, recorrido3, resultado3);
+        Coche coche4 = new Coche("Toad", carrera, recorrido4, resultado4);
+        Coche coche5 = new Coche("Peach", carrera, recorrido5, resultado5);
 
         coche1.start();
         coche2.start();
         coche3.start();
         coche4.start();
         coche5.start();
-
-
 
         // Opcional: Monitorear cuando todos terminen
         new Thread(() -> {

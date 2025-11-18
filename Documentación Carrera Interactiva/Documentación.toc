@@ -3,5 +3,5 @@
 \contentsline {section}{\numberline {3}Tecnologías utilizadas}{4}{section.3}%
 \contentsline {section}{\numberline {4}Uso del synchronized}{5}{section.4}%
 \contentsline {section}{\numberline {5}Problemas surgidos y soluciones}{6}{section.5}%
-\contentsline {section}{\numberline {6}Conclusión}{7}{section.6}%
-\contentsline {section}{\numberline {7}Bibliografía}{8}{section.7}%
+\contentsline {section}{\numberline {6}Conclusión}{8}{section.6}%
+\contentsline {section}{\numberline {7}Bibliografía}{9}{section.7}%

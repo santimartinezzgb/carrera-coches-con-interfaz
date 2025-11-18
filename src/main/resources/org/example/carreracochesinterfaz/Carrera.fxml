@@ -34,83 +34,58 @@
         </columnConstraints>
 
         <!-- Fila de la SALIDA | PISTA | POSICIÓN -->
-        <Label text="Salida" styleClass="header"
+        <Label text="SALIDA" styleClass="colecciones" alignment="CENTER"
                GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-        <Label text="Pista" styleClass="header"
+        <Label text="PISTA" styleClass="colecciones" alignment="CENTER"
                GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-        <Label text="Posicion" styleClass="header"
+        <Label text="RESULTADOS" styleClass="colecciones" alignment="CENTER"
                GridPane.columnIndex="2" GridPane.rowIndex="0"/>
 
-        <!-- Corredor 1: Mario -->
+        <!-- =============== Corredor 1: Mario =============== -->
         <ImageView GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="100" fitHeight="100" preserveRatio="true">
             <image>
                 <Image url="@images/mario.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="recorrido1"
-               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-        <ImageView fx:id="posicionMario" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/peach.jpg" />
-            </image>
-        </ImageView>
+        <Label fx:id="recorrido1" style="-fx-text-fill: red; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label fx:id="resultado1" style="-fx-text-fill: red; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
 
-        <!-- Corredor 2: Luigi -->
+
+        <!-- =============== Corredor 2: Luigi =============== -->
         <ImageView GridPane.columnIndex="0" GridPane.rowIndex="2" fitWidth="100" fitHeight="100" preserveRatio="true">
             <image>
                 <Image url="@images/luigi.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="recorrido2"  styleClass="pista"
-               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-        <ImageView fx:id="posicionLuigi" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/peach.jpg" />
-            </image>
-        </ImageView>
+        <Label fx:id="recorrido2" style="-fx-text-fill: green; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label fx:id="resultado2" style="-fx-text-fill: green; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
 
-        <!-- Corredor 3: Bowser -->
+        <!-- =============== Corredor 3: Bowser =============== -->
         <ImageView GridPane.columnIndex="0" GridPane.rowIndex="3" fitWidth="100" fitHeight="100" preserveRatio="true">
             <image>
                 <Image url="@images/bowser.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="recorrido3"
-               GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-        <ImageView fx:id="posicionBowser" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/peach.jpg" />
-            </image>
-        </ImageView>
+        <Label fx:id="recorrido3" style="-fx-text-fill: purple; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label fx:id="resultado3" style="-fx-text-fill: purple; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
 
-        <!-- Corredor 4: Toad -->
+        <!-- =============== Corredor 4: Toad =============== -->
         <ImageView GridPane.columnIndex="0" GridPane.rowIndex="4" fitWidth="100" fitHeight="100" preserveRatio="true">
             <image>
                 <Image url="@images/toad.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="recorrido4"
-               GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-        <ImageView fx:id="posicionToad" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/peach.jpg" />
-            </image>
-        </ImageView>
+        <Label fx:id="recorrido4" style="-fx-text-fill: blue; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        <Label fx:id="resultado4" style="-fx-text-fill: blue; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
 
-        <!-- Corredor 5: Peach -->
+        <!-- =============== Corredor 5: Peach =============== -->
         <ImageView GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
             <image>
                 <Image url="@images/peach.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="recorrido5"
-               GridPane.columnIndex="1" GridPane.rowIndex="5"/>
-        <ImageView fx:id="posicionPeach" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/peach.jpg" />
-            </image>
-        </ImageView>
-
+        <Label fx:id="recorrido5" style="-fx-text-fill: pink; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+        <Label fx:id="resultado5" style="-fx-text-fill: pink; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
 
     </GridPane>
 
