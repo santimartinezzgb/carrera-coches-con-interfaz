@@ -1,5 +1,6 @@
 package org.example.carreracochesinterfaz.Controladores;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,6 +13,13 @@ public class ControladorCarrera {
 
     @FXML
     private Button btn_iniciar;
+    @FXML
+    private Button btn_salir;
+
+    @FXML
+    private void salirDelPrograma(){
+        Platform.exit();
+    }
 
     @FXML
     private Label recorrido1;
@@ -42,7 +50,6 @@ public class ControladorCarrera {
         Carrera carrera = new Carrera();
         // Deshabilitar el botón para evitar múltiples carreras
         btn_iniciar.setDisable(true);
-        btn_iniciar.setText("CARRERA EN CURSO...");
 
         Coche coche1 = new Coche("Mario", carrera, recorrido1, resultado1);
         Coche coche2 = new Coche("Luigi", carrera, recorrido2, resultado2);
@@ -67,7 +74,6 @@ public class ControladorCarrera {
 
                 // Todos terminaron
                 javafx.application.Platform.runLater(() -> {
-                    btn_iniciar.setText("REINICIAR");
                     btn_iniciar.setDisable(false);
                 });
 

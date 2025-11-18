@@ -10,192 +10,177 @@
 \usepackage{tcolorbox}
 \usepackage{url}
 
-% Configuración de código
-\lstset{
-    basicstyle=\ttfamily\small,
-    keywordstyle=\color{blue}\bfseries,
-    commentstyle=\color{green!60!black},
-    stringstyle=\color{red},
-    numberstyle=\tiny\color{gray},
-    numbers=left,
-    stepnumber=1,
-    breaklines=true,
-    frame=single,
-    backgroundcolor=\color{gray!5},
-    tabsize=4,
-    captionpos=b
-}
+
 
 \begin{document}
 
-% ========================== PORTADA ==========================
-\begin{titlepage}
-    \centering
-    {\Large \textbf{Programación de Servicios y Procesos}\par}
-    \vspace{2cm}
-    {\Huge \textbf{Emulador de Mario Kart}\par}
-    \vspace{0.5cm}
-    {\LARGE Carrera de coches con Interfaz Gráfica en JavaFX\par}
-    \vspace{2cm}
-    \noindent\rule{12cm}{0.8pt}
-    \vspace{2cm}
-    {\Large \textbf{Autor:}\par}
-    \vspace{0.3cm}
-    {\large Santi Martínez\par}
-    \vspace{10cm}
-    {\large \today}
-\end{titlepage}
-
-\newpage
-\renewcommand{\contentsname}{ÍNDICE}
-\tableofcontents
-
-% ========================== INTRODUCCIÓN ==========================
-\newpage
-\section{Introducción}
-    Este proyecto consiste en un emulador simplificado de una carrera de \textbf{Mario Kart} desarrollado en Java utilizando \textbf{JavaFX} para la interfaz gráfica y los conceptos fundamentales de \textbf{programación concurrente} con hilos (\texttt{Thread}).
-
-    \vspace{0.5cm}
-    El objetivo principal es simular una carrera entre cinco icónicos personajes del universo Mario Kart (Mario, Luigi, Bowser, Toad y Peach), donde cada corredor avanza a velocidades aleatorias y el orden de llegada es completamente impredecible en cada ejecución.
-
-    \vspace{1cm}
-    \begin{center}
-        \textbf{\Huge Corredores} 
+    % ========================== PORTADA ==========================
+    \begin{titlepage}
+        \centering
+        {\Large \textbf{Programación de Servicios y Procesos}\par}
+        \vspace{2cm}
+        {\Huge \textbf{Emulador de Mario Kart}\par}
         \vspace{0.5cm}
-        
-        \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/mario.jpg}\\\textbf{Mario}\end{tabular}\hfill
-        \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/luigi.jpg}\\\textbf{Luigi}\end{tabular}\hfill
-        \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/bowser.jpg}\\\textbf{Bowser}\end{tabular}\hfill
-        \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/toad.jpg}\\\textbf{Toad}\end{tabular}\hfill
-        \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/peach.jpg}\\\textbf{Peach}\end{tabular}
-    \end{center}
+        {\LARGE Carrera de coches con Interfaz Gráfica en JavaFX\par}
+        \vspace{2cm}
+        \noindent\rule{12cm}{0.8pt}
 
-    \vspace{1cm}
-    \begin{tcolorbox}[colback=green!3!white,colframe=blue!60!black,fonttitle=\bfseries]
-        Cada corredor es una instancia de la clase \textbf{Coche}, que extiende \underline{Thread}. Al ejecutar el método \textbf{start()}, los cinco hilos corren en paralelo, compitiendo por llegar primero a la meta.
-    \end{tcolorbox}
+        \vspace{2cm}
+        {\Large \textbf{Autor:}\par}
+        \vspace{0.3cm}
+        {\large Santi Martínez\par}
+        \vspace{10cm}
+        {\large \today}
+    \end{titlepage}
 
-    \vspace{0.5cm}
-    Gracias al uso de hilos y la aleatoriedad en los tiempos de sueño y velocidad, \textbf{cada carrera tiene un resultado diferente}, simulando perfectamente la emoción y la incertidumbre de una verdadera partida de Mario Kart.
-
-% ========================== PLANTEAMIENTO ==========================
-\newpage
-\section{Planteamiento}
-Inicialmente el proyecto era un programa de terminal que representaba mediante =, el avance de cada coche en la carrera.
-
-\vspace{0.5cm}
-Una vez realizado, se propuso el ejercicio de realizarlo mediante interfaz gráfica. Así que lo primero es plantear el programa:
-
-\begin{itemize}
-    \item Interfaz gráfica con \textbf{JavaFX}
-    \item Cinco \textbf{Label} que muestran en tiempo real el recorrido de cada coche
-    \item Un \textbf{ImageView} por corredor que cambia al llegar a la meta (medalla de oro, plata, bronce, cuarta posición y último)
-    \begin{center} 
-        \vspace{0.5cm}
-        
-        \begin{tabular}{@{}c@{}}\includegraphics[height=2cm]{images/oro.png}\\\textbf{Oro}\end{tabular}\hfill
-        \begin{tabular}{@{}c@{}}\includegraphics[height=2cm]{images/plata.png}\\\textbf{Plata}\end{tabular}\hfill
-        \begin{tabular}{@{}c@{}}\includegraphics[height=2cm]{images/bronce.png}\\\textbf{Bronce}\end{tabular}\hfill
-        \begin{tabular}{@{}c@{}}\includegraphics[height=2cm]{images/hoja.png}\\\textbf{4º puesto}\end{tabular}\hfill
-        \begin{tabular}{@{}c@{}}\includegraphics[height=2cm]{images/goomba.png}\\\textbf{5º puesto}\end{tabular}
-    \end{center}
-    \item Avance visual mediante cadenas de caracteres.
-\end{itemize}
-
-La diferencia principal respecto al programa de terminal, fue el tener que garantizar que las actualizaciones de la interfaz gráfica se realizaran desde hilos secundarios, mediante la utilización de \textbf{Platform.runLater()}.
-
-% ========================== TECNOLOGÍAS UTILIZADAS ==========================
-\newpage
-\section{Tecnologías utilizadas}
-
-\begin{itemize}
-    \item \textbf{Java SE} – Lenguaje principal
-    \item \textbf{JavaFX} – Interfaz gráfica y manejo de eventos
-    \item \textbf{Hilos (Thread)} – Ejecución concurrente de los corredores
-    \item \textbf{Maven/IntelliJ IDEA} – Gestión y desarrollo del proyecto
-    \item \textbf{FXML} – Diseño declarativo de la interfaz
-\end{itemize}
-
-% ========================== DESCRIPCIÓN TÉCNICA ==========================
-\newpage
-\section{Uso del synchronized}
-    \begin{tcolorbox}[colback=green!3!white,colframe=blue!60!black,fonttitle=\bfseries]
-       
-    \end{tcolorbox}
-
-% ========================== PROBLEMAS SURGIDOS ==========================
-\newpage
-\section{Problemas surgidos y soluciones}
-
-\begin{enumerate}
-    \item \textbf{Actualización de la GUI desde hilos secundarios}
-    
-    \textit{Solución:} Uso obligatorio de \texttt{Platform.runLater()}
-    
-    \item \textbf{Variable expected} 
-    
-    El problema que más me ha llevado tiempo del programa. Estoy escribiendo esto sin todavía haber llegado a una solución, así que se va a mostrar a continuación una captura del mismo:
-    \begin{figure}[!h]
-        \begin{center}
-            \includegraphics[height=7cm]{images/variable-expected.png}
-        \end{center}
-    \end{figure}
-
-    \textbf{Solución 1:} Se estaba intentando asignar un valor al resultado de un método, no a una variable; además de utilizar un getter y no un setter para añadir un valor. De ahí el primer fallo.
-
-    \vspace{0.5cm}
-    \textbf{Solución final:} No pude implementar lo que quería, que era un objeto Image a través de setUrl(), pero como ese método no existe en el objeto Image, debido a que no puede modificarse, cambié de rumbo en la idea que tenía en esta parte del programa.
-    
     \newpage
-    \item \textbf{Return de ordenDeLlegada en clase Carrera}: El problema fue que sin razón aparente, el método ordenDeLlegada(), necesario para que devuelva ese orden y trabajar con ese dato en la UI, se devolvía de dos en dos.
-    \begin{figure}[!h]
+    \renewcommand{\contentsname}{ÍNDICE}
+    \tableofcontents
+
+    % ========================== INTRODUCCIÓN ==========================
+    \newpage
+    \section{Introducción}
+        Este proyecto consiste en un emulador simplificado de una carrera de \textbf{Mario Kart} desarrollado en Java utilizando \textbf{JavaFX} para la interfaz gráfica y los conceptos fundamentales de \textbf{programación concurrente} con hilos (\texttt{Thread}).
+
+        \vspace{0.5cm}
+        El objetivo principal es simular una carrera entre cinco icónicos personajes del universo Mario Kart (Mario, Luigi, Bowser, Toad y Peach), donde cada corredor avanza a velocidades aleatorias y el orden de llegada es completamente impredecible en cada ejecución.
+
+        \vspace{1cm}
         \begin{center}
-            \includegraphics[height=7cm]{images/return-ordenDeLlegada().png}
+            \textbf{\Huge Corredores} 
+            \vspace{0.5cm}
+            
+            \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/mario.jpg}\\\textbf{Mario}\end{tabular}\hfill
+            \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/luigi.jpg}\\\textbf{Luigi}\end{tabular}\hfill
+            \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/bowser.jpg}\\\textbf{Bowser}\end{tabular}\hfill
+            \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/toad.jpg}\\\textbf{Toad}\end{tabular}\hfill
+            \begin{tabular}{@{}c@{}}\includegraphics[height=3.2cm]{images/peach.jpg}\\\textbf{Peach}\end{tabular}
         \end{center}
-        \caption{Devuelve: 2, 4, 6, 8, 10}
-    \end{figure}    
-    
-    \textit{Solución:} Problema con mútliples llamadas al método en la clase \textbf{Coche}.
-    \begin{figure}[!h]
-        \begin{center}
-            \includegraphics[height=5cm]{images/solucion-ordenDeLlegada.png}
-        \end{center}
-    \end{figure}  
-    
-    Al realizar controles por terminal, se utilizó un System.out para comprobar qué número devolvía, sin darme cuenta que ese mismo control de errores causaba el error.
 
-    Esto provocaba la suma doble del contador, debido a que ya se había llamado con anterioridad al método para modificar el texto de otro campo.
+        \vspace{1cm}
+        \begin{tcolorbox}[colback=green!3!white,colframe=blue!60!black,fonttitle=\bfseries]
+            Cada corredor es una instancia de la clase \textbf{Coche}, que extiende \underline{Thread}. Al ejecutar el método \textbf{start()}, los cinco hilos corren en paralelo, compitiendo por llegar primero a la meta.
+        \end{tcolorbox}
 
-\end{enumerate}
+        \vspace{0.5cm}
+        Gracias al uso de hilos y la aleatoriedad en los tiempos de sueño y velocidad, \textbf{cada carrera tiene un resultado diferente}, simulando perfectamente la emoción y la incertidumbre de una verdadera partida de Mario Kart.
 
-% ========================== CONCLUSIÓN ==========================
-\newpage
-\section{Conclusión}
+    % ========================== PLANTEAMIENTO ==========================
+    \newpage
+    \section{Planteamiento}
+        Inicialmente el proyecto era un programa de terminal que representaba mediante "=", el avance de cada coche en la carrera.
 
-Este proyecto ha permitido aplicar de forma práctica y divertida conceptos clave de la asignatura:
+        \vspace{0.5cm}
+        Una vez realizado, se propuso el ejercicio de realizarlo mediante interfaz gráfica. Así que lo primero es plantear el programa:
 
-\begin{itemize}
-    \item Creación y gestión de hilos en Java
-    \item Concurrencia y comportamiento no determinista
-    \item Comunicación segura entre hilos y la interfaz gráfica (JavaFX)
-    \item Diseño de aplicaciones interactivas con eventos
-\end{itemize}
+        \begin{itemize}
+            \item Interfaz gráfica con \textbf{JavaFX}
+            \item Cinco \textbf{Label} que muestran en tiempo real el recorrido de cada coche
+        
+            \item Avance visual mediante cadenas de caracteres.
+        \end{itemize}
 
-El resultado es una carrera visual, dinámica y adictiva que refleja fielmente la esencia de Mario Kart, demostrando que con pocos elementos se puede crear una experiencia muy entretenida.
+        \begin{figure}[!h]
+            \begin{center}
+                \includegraphics[height=6cm]{images/planteamiento.jpg}
+            \end{center}
+        \end{figure}
 
-¡Es imposible no pulsar el botón de "REINICIAR" una y otra vez para ver quién gana esta vez!
+        La diferencia principal respecto al programa de terminal, fue el tener que garantizar que las actualizaciones de la interfaz gráfica se realizaran desde hilos secundarios, mediante la utilización de \textbf{Platform.runLater()}.
 
-% ========================== BIBLIOGRAFÍA ==========================
-\newpage
-\section{Bibliografía}
+        \vspace{0.5cm}
+        \begin{tcolorbox}[colback=green!3!white,colframe=blue!60!black,fonttitle=\bfseries]
+            \textbf{Platform.runLater()} ejecuta código en el hilo de la interfaz gráfica de JavaFX. Su utilización se enfoca en actualizar la UI desde otro hilo para evitar errores de concurrencia.
+        \end{tcolorbox}
 
-\begin{itemize}
-    \item Oracle Docs – The Java™ Tutorials: Concurrency \\
-    \url{https://docs.oracle.com/javase/tutorial/essential/concurrency/}
-    \item OpenJFX Documentation \\
-    \url{https://openjfx.io/}
-    \item Stack Overflow – "JavaFX Platform.runLater and Task" (varias respuestas útiles)
-    \item Imágenes de personajes y medallas extraídas del universo Mario Kart (Nintendo)
-\end{itemize}
+
+    % ========================== DESCRIPCIÓN TÉCNICA ==========================
+    \newpage
+    \section{Uso del synchronized}
+        \begin{tcolorbox}[colback=green!3!white,colframe=blue!60!black,fonttitle=\bfseries]
+        \textbf{Synchronized} en Java garantiza que solo un hilo acceda a un bloque de código o método a la vez, evitando condiciones de carrera y problemas de concurrencia al sincronizar el acceso a recursos compartidos.
+        \end{tcolorbox}
+
+        \begin{figure}[!h]
+            \begin{center}
+                \includegraphics[height=9cm]{images/ejemplo-synchronized.png}
+            \end{center}
+        \end{figure}
+
+        En este caso, el synchronized se utilizó para el método \textbf{ordenDeLlegada()}, el cual gestiona la llegada de cada instancia de la clase coche que iba finalizando el hilo, para así devolver la posición en carrera de los respectivos coches.
+
+        \begin{figure}[!h]
+            \begin{center}
+                \includegraphics[height=7cm]{images/return-ordenDeLlegada().png}
+            \end{center}
+        \end{figure}
+
+    % ========================== PROBLEMAS SURGIDOS ==========================
+    \newpage
+    \section{Problemas surgidos y soluciones}
+
+    \begin{enumerate}
+        \item \textbf{Actualización de la UI desde hilos secundarios}
+        
+        \textit{Solución:} Uso obligatorio de \texttt{Platform.runLater()}
+        
+        \item \textbf{Variable expected} 
+        
+        El problema que más me ha llevado tiempo del programa. Estoy escribiendo esto sin todavía haber llegado a una solución, así que se va a mostrar a continuación una captura del mismo:
+        \begin{figure}[!h]
+            \begin{center}
+                \includegraphics[height=7cm]{images/variable-expected.png}
+            \end{center}
+        \end{figure}
+
+        \textbf{Solución 1:} Se estaba intentando asignar un valor al resultado de un método, no a una variable; además de utilizar un getter y no un setter para añadir un valor. De ahí el primer fallo.
+
+        \vspace{0.5cm}
+        \textbf{Solución final:} No pude implementar lo que quería, que era un objeto Image a través de setUrl(), pero como ese método no existe en el objeto Image, debido a que no puede modificarse, cambié de rumbo en la idea que tenía en esta parte del programa.
+        
+        \newpage
+        \item \textbf{Return de ordenDeLlegada en clase Carrera}: El problema fue que sin razón aparente, el método ordenDeLlegada(), necesario para que devuelva ese orden y trabajar con ese dato en la UI, se devolvía de dos en dos.
+        \begin{figure}[!h]
+            \begin{center}
+                \includegraphics[height=7cm]{images/return-ordenDeLlegada().png}
+            \end{center}
+            \caption{Devuelve: 2, 4, 6, 8, 10}
+        \end{figure}    
+        
+        \textit{Solución:} Problema con mútliples llamadas al método en la clase \textbf{Coche}.
+        \begin{figure}[!h]
+            \begin{center}
+                \includegraphics[height=5cm]{images/solucion-ordenDeLlegada.png}
+            \end{center}
+        \end{figure}  
+        
+        Al realizar controles por terminal, se utilizó un System.out para comprobar qué número devolvía, sin darme cuenta que ese mismo control de errores causaba el error.
+
+        Esto provocaba la suma doble del contador, debido a que ya se había llamado con anterioridad al método para modificar el texto de otro campo.
+
+    \end{enumerate}
+
+    % ========================== CONCLUSIÓN ==========================
+    \newpage
+    \section{Conclusión}
+
+    El tema elegido para esta representación gráfica ha sido el \textbf{Mario Kart}. Es un juego que siempre me ha gustado y me pareció que podría adoptar una vista acorde para un programa de carrera de coches.
+
+    \vspace{0.5cm}
+    Pese a que el backend estaba ya prácticamente hecho del anterior trabajo, esta implementación me ha servido para poder estructurar mejor en mi cabeza el funcionamiento de los hilos y lo que pasa cuando comparten métodos con \underline{synchronized}.
+
+    \vspace{0.5cm}
+    La implementación gráfica al programa me ha parecido bastante entretenida. Creo que se puede deber a que estoy empezando a organizar todo desde el principio antes de empezar a teclear, y eso me está haciendo disfrutar mucho más de la programación.
+
+
+    % ========================== BIBLIOGRAFÍA ==========================
+    \newpage
+    \section{Bibliografía}
+
+    \begin{itemize}
+
+        \item Imágenes de los personajes de Mario Kart \href{https://es.pinterest.com/}{Imágenes de personajes}
+        \item https://stackoverflow.com/questions/10292792/getting-image-from-url-java
+    \end{itemize}
 
 \end{document}

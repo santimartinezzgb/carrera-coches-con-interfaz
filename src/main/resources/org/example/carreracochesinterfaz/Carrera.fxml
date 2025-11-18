@@ -16,77 +16,98 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Button fx:id="btn_iniciar" text="INICIAR" prefWidth="200" prefHeight="50"
-            maxWidth="200" maxHeight="50" onAction="#iniciar"/>
-
-    <!-- GridPane, el análogo a un grid en html -->
-    <GridPane fx:id="pantalla_carrera" hgap="10" vgap="20" style="-fx-background-color: white;"
-              alignment="CENTER" prefWidth="800" maxWidth="800" prefHeight="800" maxHeight="800">
+    <VBox fx:id="consola" style="-fx-background-color: orange; -fx-background-radius: 25; -fx-border-radius: 20;
+            -fx-border-width: 5; -fx-border-color: black;" prefWidth="800" maxWidth="800"
+          prefHeight="850" maxHeight="850" alignment="CENTER" spacing="20">
         <padding>
-            <Insets top="20" right="50" bottom="20" left="50"/>
+            <Insets top="20" right="20" bottom="20" left="20"/>
         </padding>
 
-        <!-- Columnas que hacen la matriz que conforman las pistas, el recorrido que se va a realizar en la carrera -->
-        <columnConstraints>
-            <ColumnConstraints minWidth="150" prefWidth="150"/> <!-- Columna para nombres -->
-            <ColumnConstraints minWidth="600" prefWidth="600"/> <!-- Columna para recorrido -->
-            <ColumnConstraints minWidth="150" prefWidth="150"/>  <!-- Columna para meta -->
-        </columnConstraints>
 
-        <!-- Fila de la SALIDA | PISTA | POSICIÓN -->
-        <Label text="SALIDA" styleClass="colecciones" alignment="CENTER"
-               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-        <Label text="PISTA" styleClass="colecciones" alignment="CENTER"
-               GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-        <Label text="RESULTADOS" styleClass="colecciones" alignment="CENTER"
-               GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <!-- PANTALLA PRINCIPAL -->
+        <GridPane fx:id="pantalla_carrera" hgap="10" vgap="20" style="-fx-background-color: white; -fx-border-radius: 20;
+        -fx-border-width: 5; -fx-border-color: black; -fx-background-radius: 25;"
+                  alignment="CENTER" prefWidth="600" maxWidth="600" prefHeight="600" maxHeight="600">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
 
-        <!-- =============== Corredor 1: Mario =============== -->
-        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/mario.jpg" />
-            </image>
-        </ImageView>
-        <Label fx:id="recorrido1" style="-fx-text-fill: red; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-        <Label fx:id="resultado1" style="-fx-text-fill: red; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <!-- Columnas que hacen la matriz que conforman las pistas, el recorrido que se va a realizar en la carrera -->
+            <columnConstraints>
+                <ColumnConstraints minWidth="150" prefWidth="150"/> <!-- Columna para nombres -->
+                <ColumnConstraints minWidth="600" prefWidth="600"/> <!-- Columna para recorrido -->
+                <ColumnConstraints minWidth="150" prefWidth="150"/>  <!-- Columna para meta -->
+            </columnConstraints>
+
+            <!-- Fila de la SALIDA | PISTA | POSICIÓN -->
+            <Label text="SALIDA" styleClass="colecciones" alignment="CENTER"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label text="PISTA" styleClass="colecciones" alignment="CENTER"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="RESULTADOS" styleClass="colecciones" alignment="CENTER"
+                   GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+            <!-- =============== Corredor 1: Mario =============== -->
+            <ImageView GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="90" fitHeight="90" preserveRatio="true">
+                <image>
+                    <Image url="@images/mario.jpg" />
+                </image>
+            </ImageView>
+            <Label fx:id="recorrido1" style="-fx-text-fill: red; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label fx:id="resultado1" alignment="CENTER" style="-fx-text-fill: red; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
 
 
-        <!-- =============== Corredor 2: Luigi =============== -->
-        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="2" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/luigi.jpg" />
-            </image>
-        </ImageView>
-        <Label fx:id="recorrido2" style="-fx-text-fill: green; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-        <Label fx:id="resultado2" style="-fx-text-fill: green; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <!-- =============== Corredor 2: Luigi =============== -->
+            <ImageView GridPane.columnIndex="0" GridPane.rowIndex="2" fitWidth="90" fitHeight="90" preserveRatio="true">
+                <image>
+                    <Image url="@images/luigi.jpg" />
+                </image>
+            </ImageView>
+            <Label fx:id="recorrido2" style="-fx-text-fill: green; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label fx:id="resultado2" alignment="CENTER" style="-fx-text-fill: green; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
 
-        <!-- =============== Corredor 3: Bowser =============== -->
-        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="3" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/bowser.jpg" />
-            </image>
-        </ImageView>
-        <Label fx:id="recorrido3" style="-fx-text-fill: purple; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-        <Label fx:id="resultado3" style="-fx-text-fill: purple; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <!-- =============== Corredor 3: Bowser =============== -->
+            <ImageView GridPane.columnIndex="0" GridPane.rowIndex="3" fitWidth="90" fitHeight="90" preserveRatio="true">
+                <image>
+                    <Image url="@images/bowser.jpg" />
+                </image>
+            </ImageView>
+            <Label fx:id="recorrido3" style="-fx-text-fill: purple; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label fx:id="resultado3" alignment="CENTER" style="-fx-text-fill: purple; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
 
-        <!-- =============== Corredor 4: Toad =============== -->
-        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="4" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/toad.jpg" />
-            </image>
-        </ImageView>
-        <Label fx:id="recorrido4" style="-fx-text-fill: blue; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-        <Label fx:id="resultado4" style="-fx-text-fill: blue; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+            <!-- =============== Corredor 4: Toad =============== -->
+            <ImageView GridPane.columnIndex="0" GridPane.rowIndex="4" fitWidth="90" fitHeight="90" preserveRatio="true">
+                <image>
+                    <Image url="@images/toad.jpg" />
+                </image>
+            </ImageView>
+            <Label fx:id="recorrido4" style="-fx-text-fill: blue; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Label fx:id="resultado4" alignment="CENTER" style="-fx-text-fill: blue; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
 
-        <!-- =============== Corredor 5: Peach =============== -->
-        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
-            <image>
-                <Image url="@images/peach.jpg" />
-            </image>
-        </ImageView>
-        <Label fx:id="recorrido5" style="-fx-text-fill: pink; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
-        <Label fx:id="resultado5" style="-fx-text-fill: pink; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+            <!-- =============== Corredor 5: Peach =============== -->
+            <ImageView GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="90" fitHeight="90" preserveRatio="true">
+                <image>
+                    <Image url="@images/peach.jpg" />
+                </image>
+            </ImageView>
+            <Label fx:id="recorrido5" style="-fx-text-fill: pink; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            <Label fx:id="resultado5" alignment="CENTER" style="-fx-text-fill: pink; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
 
-    </GridPane>
+        </GridPane>
+
+        <VBox alignment="BOTTOM_RIGHT" style="-fx-padding: 0 150 0 0 0">
+            <Button fx:id="btn_salir" text="B" prefWidth="70" prefHeight="70" maxWidth="70" maxHeight="70" onAction="#salirDelPrograma"
+                    alignment="CENTER" style="-fx-border-radius: 100; -fx-font-size: 20; -fx-background-color:red;
+                     -fx-text-fill: white; -fx-background-radius: 100; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        </VBox>
+        <VBox alignment="BOTTOM_RIGHT" style="-fx-padding: 0 200 0 0 0">
+            <Button fx:id="btn_iniciar" text="A" prefWidth="70" prefHeight="70" maxWidth="70" maxHeight="70" onAction="#iniciar"
+                    alignment="CENTER" style="-fx-border-radius: 100; -fx-font-size: 20; -fx-background-radius: 100;
+                    -fx-font-weight: bold; -fx-cursor: hand;"/>
+        </VBox>
+
+    </VBox>
+
+
 
 </VBox>

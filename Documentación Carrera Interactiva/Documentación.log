@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.16)  18 NOV 2025 21:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.16)  18 NOV 2025 23:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -405,24 +405,24 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ) (./Documentación.aux)
 \openout1 = `Documentación.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -477,7 +477,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 15.
  (./Documentación.out) (./Documentación.out)
 \@outlinefile=\write4
 \openout4 = `Documentación.out'.
@@ -493,103 +493,93 @@ Package hyperref Info: Link coloring OFF on input line 29.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.54 \newpage
-              [1]
+l.41     \newpage
+                  [1]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 66.
+(Font)              <12> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 66.
+(Font)              <8> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 66.
-<images/mario.jpg, id=56, 731.73375pt x 753.81625pt>
+(Font)              <6> on input line 53.
+<images/mario.jpg, id=51, 731.73375pt x 753.81625pt>
 File: images/mario.jpg Graphic file (type jpg)
 <use images/mario.jpg>
-Package pdftex.def Info: images/mario.jpg  used on input line 66.
+Package pdftex.def Info: images/mario.jpg  used on input line 53.
 (pdftex.def)             Requested size: 88.37369pt x 91.04872pt.
-<images/luigi.jpg, id=57, 949.5475pt x 1429.34pt>
+<images/luigi.jpg, id=52, 949.5475pt x 1429.34pt>
 File: images/luigi.jpg Graphic file (type jpg)
 <use images/luigi.jpg>
-Package pdftex.def Info: images/luigi.jpg  used on input line 67.
+Package pdftex.def Info: images/luigi.jpg  used on input line 54.
 (pdftex.def)             Requested size: 60.4767pt x 91.04872pt.
-<images/bowser.jpg, id=58, 524.96124pt x 499.8675pt>
+<images/bowser.jpg, id=53, 524.96124pt x 499.8675pt>
 File: images/bowser.jpg Graphic file (type jpg)
 <use images/bowser.jpg>
-Package pdftex.def Info: images/bowser.jpg  used on input line 68.
+Package pdftex.def Info: images/bowser.jpg  used on input line 55.
 (pdftex.def)             Requested size: 95.6184pt x 91.04872pt.
-<images/toad.jpg, id=59, 739.76375pt x 819.06pt>
+<images/toad.jpg, id=54, 739.76375pt x 819.06pt>
 File: images/toad.jpg Graphic file (type jpg)
 <use images/toad.jpg>
-Package pdftex.def Info: images/toad.jpg  used on input line 69.
+Package pdftex.def Info: images/toad.jpg  used on input line 56.
 (pdftex.def)             Requested size: 82.23213pt x 91.04872pt.
-<images/peach.jpg, id=60, 737.75626pt x 756.8275pt>
+<images/peach.jpg, id=55, 737.75626pt x 756.8275pt>
 File: images/peach.jpg Graphic file (type jpg)
 <use images/peach.jpg>
-Package pdftex.def Info: images/peach.jpg  used on input line 70.
+Package pdftex.def Info: images/peach.jpg  used on input line 57.
 (pdftex.def)             Requested size: 88.75208pt x 91.04872pt.
  [2 <./images/mario.jpg> <./images/luigi.jpg> <./images/bowser.jpg> <./images/toad.jpg> <./images/peach.jpg>]
-<images/oro.png, id=67, 734.745pt x 715.67375pt>
-File: images/oro.png Graphic file (type png)
-<use images/oro.png>
-Package pdftex.def Info: images/oro.png  used on input line 96.
-(pdftex.def)             Requested size: 58.41083pt x 56.9055pt.
-<images/plata.png, id=68, 823.075pt x 845.1575pt>
-File: images/plata.png Graphic file (type png)
-<use images/plata.png>
-Package pdftex.def Info: images/plata.png  used on input line 97.
-(pdftex.def)             Requested size: 55.41074pt x 56.9055pt.
-<images/bronce.png, id=69, 501.875pt x 500.87125pt>
-File: images/bronce.png Graphic file (type png)
-<use images/bronce.png>
-Package pdftex.def Info: images/bronce.png  used on input line 98.
-(pdftex.def)             Requested size: 57.0137pt x 56.9055pt.
-<images/hoja.png, id=70, 501.875pt x 500.87125pt>
-File: images/hoja.png Graphic file (type png)
-<use images/hoja.png>
-Package pdftex.def Info: images/hoja.png  used on input line 99.
-(pdftex.def)             Requested size: 57.0137pt x 56.9055pt.
-<images/goomba.png, id=71, 752.8125pt x 774.895pt>
-File: images/goomba.png Graphic file (type png)
-<use images/goomba.png>
-Package pdftex.def Info: images/goomba.png  used on input line 100.
-(pdftex.def)             Requested size: 55.27533pt x 56.9055pt.
- [3 <./images/oro.png (PNG copy)> <./images/plata.png (PNG copy)> <./images/bronce.png (PNG copy)> <./images/hoja.png (PNG copy)> <./images/goomba.png (PNG copy)>] [4] [5]
-<images/variable-expected.png, id=89, 321.2pt x 239.89626pt>
-File: images/variable-expected.png Graphic file (type png)
-<use images/variable-expected.png>
-Package pdftex.def Info: images/variable-expected.png  used on input line 140.
-(pdftex.def)             Requested size: 266.67435pt x 199.16928pt.
- [6 <./images/variable-expected.png>]
-<images/return-ordenDeLlegada().png, id=101, 625.33624pt x 344.28625pt>
+<images/planteamiento.jpg, id=62, 589.20125pt x 299.1175pt>
+File: images/planteamiento.jpg Graphic file (type jpg)
+<use images/planteamiento.jpg>
+Package pdftex.def Info: images/planteamiento.jpg  used on input line 85.
+(pdftex.def)             Requested size: 336.27974pt x 170.71652pt.
+ [3 <./images/planteamiento.jpg>]
+<images/ejemplo-synchronized.png, id=69, 602.25pt x 401.5pt>
+File: images/ejemplo-synchronized.png Graphic file (type png)
+<use images/ejemplo-synchronized.png>
+Package pdftex.def Info: images/ejemplo-synchronized.png  used on input line 106.
+(pdftex.def)             Requested size: 384.13376pt x 256.0748pt.
+<images/return-ordenDeLlegada().png, id=70, 625.33624pt x 344.28625pt>
 File: images/return-ordenDeLlegada().png Graphic file (type png)
 <use images/return-ordenDeLlegada().png>
-Package pdftex.def Info: images/return-ordenDeLlegada().png  used on input line 153.
+Package pdftex.def Info: images/return-ordenDeLlegada().png  used on input line 114.
 (pdftex.def)             Requested size: 361.76018pt x 199.16928pt.
-<images/solucion-ordenDeLlegada.png, id=102, 874.26625pt x 253.94875pt>
+ [4 <./images/ejemplo-synchronized.png> <./images/return-ordenDeLlegada().png>]
+<images/variable-expected.png, id=79, 321.2pt x 239.89626pt>
+File: images/variable-expected.png Graphic file (type png)
+<use images/variable-expected.png>
+Package pdftex.def Info: images/variable-expected.png  used on input line 132.
+(pdftex.def)             Requested size: 266.67435pt x 199.16928pt.
+ [5 <./images/variable-expected.png>]
+File: images/return-ordenDeLlegada().png Graphic file (type png)
+<use images/return-ordenDeLlegada().png>
+Package pdftex.def Info: images/return-ordenDeLlegada().png  used on input line 145.
+(pdftex.def)             Requested size: 361.76018pt x 199.16928pt.
+<images/solucion-ordenDeLlegada.png, id=89, 874.26625pt x 253.94875pt>
 File: images/solucion-ordenDeLlegada.png Graphic file (type png)
 <use images/solucion-ordenDeLlegada.png>
-Package pdftex.def Info: images/solucion-ordenDeLlegada.png  used on input line 161.
+Package pdftex.def Info: images/solucion-ordenDeLlegada.png  used on input line 153.
 (pdftex.def)             Requested size: 489.78586pt x 142.26378pt.
- [7 <./images/return-ordenDeLlegada().png> <./images/solucion-ordenDeLlegada.png>] [8] [9] (./Documentación.aux)
+ [6 <./images/solucion-ordenDeLlegada.png>] [7] [8] (./Documentación.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `Documentación.out' has not changed.
-(rerunfilecheck)             Checksum: F545AD6BA045198B9B550947A1FB9320;931.
+(rerunfilecheck)             Checksum: 49D276BFAD9F904CF4BBB55DB218A81B;772.
  ) 
 Here is how much of TeX's memory you used:
- 21292 strings out of 476120
- 404177 string characters out of 5793656
+ 21267 strings out of 476120
+ 403846 string characters out of 5793656
  1929975 words of memory out of 5000000
- 42985 multiletter control sequences out of 15000+600000
- 564115 words of font info for 56 fonts, out of 8000000 for 9000
+ 42963 multiletter control sequences out of 15000+600000
+ 563774 words of font info for 55 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 83i,10n,87p,531b,531s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/santi/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1200.600pk> </home/santi/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Documentación.pdf (10 pages, 1869861 bytes).
+ 83i,10n,87p,531b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/santi/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Documentación.pdf (9 pages, 497599 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,12 +4,27 @@
 }
 
 #pantalla {
-    -fx-background-image: url("images/fondo.jpg");
+    -fx-background-image: url("images/fondo2.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;   /* Ajusta la imagen al tamaño del nodo */
+    -fx-background-position: center center;
 }
+
 
 #pantalla_carrera{
     -fx-background-radius: 10;
     -fx-border-radius: 10;
     -fx-border-size: 25;
     -fx-border-color: blue;
+}
+
+#btn_salir:hover{
+    -fx-scale-y: 1.05;
+    -fx-scale-x: 1.05;
+}
+
+
+#btn_iniciar:hover{
+    -fx-scale-y: 1.05;
+    -fx-scale-x: 1.05;
 }
