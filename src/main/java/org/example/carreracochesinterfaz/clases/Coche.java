@@ -44,7 +44,7 @@ public class Coche extends Thread {
             int velocidad = (int) (Math.random() * 300);
             velocidades.add(velocidad);
 
-            // Avance
+            // Avance según la velocidad que lleven
             if (velocidad > 250) {
                 carretera.add("━━━━");
                 distanciaRecorrida += 10;
@@ -60,7 +60,7 @@ public class Coche extends Thread {
             }
 
             if (distanciaRecorrida <= 100) {
-                // Actualizar la interfaz gráfica en el hilo de JavaFX
+                // Actualizar la interfaz gráfica
                 actualizarJavafx();
 
                 // También imprimir en consola
@@ -104,7 +104,6 @@ public class Coche extends Thread {
     }
 
     // Actualiza la interfaz gráfica de forma segura desde un Thread
-
     private void actualizarJavafx() {
         Platform.runLater(() -> {
             String avance = String.join("", carretera);
