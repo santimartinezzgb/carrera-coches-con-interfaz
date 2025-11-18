@@ -7,12 +7,14 @@ public class Carrera {
     ArrayList<Integer> velocidades = new ArrayList<>();
 
 
-    public synchronized void ordenDeLlegada(String nombre, int velocidadMax){
+    public synchronized String ordenDeLlegada(String nombre, int velocidadMax){
 
         orden.add(nombre);
         velocidades.add(velocidadMax);
-        if(orden.size()==4){
-            // "Limpiar" terminal
+        String posicion = "";
+
+        if(orden.size()==5){
+
             for (int i = 0; i < 100; i++) {
                 System.out.println();
             }
@@ -20,8 +22,11 @@ public class Carrera {
                 System.out.println("----------------------------- " + (i+1) + "º POSICIÓN ---------------------------------" +
                         "\n"+orden.get(i).toUpperCase() + ", con una velocidad máxima de " + velocidades.get(i) + " km/h");
                 System.out.println();
+                posicion = String.valueOf(i+1);
             }
         }
+
+        return posicion;
 
     }
 }

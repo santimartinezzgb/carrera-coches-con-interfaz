@@ -3,34 +3,115 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.HBox?>
-<VBox fx:id="pantalla" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" stylesheets="@styles.css"
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox fx:id="pantalla" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      stylesheets="@styles.css"
       fx:controller="org.example.carreracochesinterfaz.Controladores.ControladorCarrera">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Button fx:id="btn_iniciar" text="INICIAR" prefWidth="200" prefHeight="50" maxWidth="200" maxHeight="50"/>
+    <Button fx:id="btn_iniciar" text="INICIAR" prefWidth="200" prefHeight="50"
+            maxWidth="200" maxHeight="50" onAction="#iniciar"/>
 
-    <VBox fx:id="pantalla_carrera" prefWidth="500" maxWidth="500" prefHeight="700" maxHeight="700">
+    <!-- GridPane, el análogo a un grid en html -->
+    <GridPane fx:id="pantalla_carrera" hgap="10" vgap="20" style="-fx-background-color: white;"
+              alignment="CENTER" prefWidth="800" maxWidth="800" prefHeight="800" maxHeight="800">
+        <padding>
+            <Insets top="20" right="50" bottom="20" left="50"/>
+        </padding>
 
-        <HBox spacing="400.0" alignment="CENTER">
-            <Label fx:id="salida" text="Salida" prefWidth="300" maxWidth="300"/>
-            <Label fx:id="meta" text="Meta" prefWidth="300" maxWidth="300"/>
+        <!-- Columnas que hacen la matriz que conforman las pistas, el recorrido que se va a realizar en la carrera -->
+        <columnConstraints>
+            <ColumnConstraints minWidth="150" prefWidth="150"/> <!-- Columna para nombres -->
+            <ColumnConstraints minWidth="600" prefWidth="600"/> <!-- Columna para recorrido -->
+            <ColumnConstraints minWidth="150" prefWidth="150"/>  <!-- Columna para meta -->
+        </columnConstraints>
+
+        <!-- Fila de la SALIDA | PISTA | POSICIÓN -->
+        <Label text="Salida" styleClass="header"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label text="Pista" styleClass="header"
+               GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Posicion" styleClass="header"
+               GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+        <!-- Corredor 1: Mario -->
+        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/mario.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="recorrido1"
+               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <ImageView fx:id="posicionMario" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/peach.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Corredor 2: Luigi -->
+        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="2" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/luigi.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="recorrido2"  styleClass="pista"
+               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <ImageView fx:id="posicionLuigi" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/peach.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Corredor 3: Bowser -->
+        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="3" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/bowser.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="recorrido3"
+               GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <ImageView fx:id="posicionBowser" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/peach.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Corredor 4: Toad -->
+        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="4" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/toad.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="recorrido4"
+               GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        <ImageView fx:id="posicionToad" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/peach.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Corredor 5: Peach -->
+        <ImageView GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/peach.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="recorrido5"
+               GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+        <ImageView fx:id="posicionPeach" GridPane.columnIndex="0" GridPane.rowIndex="5" fitWidth="100" fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@images/peach.jpg" />
+            </image>
+        </ImageView>
 
 
-        </HBox>
-        <VBox spacing="80.0" alignment="CENTER_LEFT" prefWidth="280" maxWidth="280" prefHeight="680" maxHeight="680">
-            <Label fx:id="Mario" styleClass="coche" text="Mario"/>
-            <Label fx:id="Luigi" styleClass="coche" text="Luigi"/>
-            <Label fx:id="Bowser" styleClass="coche" text="Bowser"/>
-            <Label fx:id="Toad" styleClass="coche" text="Toad"/>
-            <Label fx:id="Peach" styleClass="coche" text="Peach"/>
-
-        </VBox>
-    </VBox>
-
+    </GridPane>
 
 </VBox>
