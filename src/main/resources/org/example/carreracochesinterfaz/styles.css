@@ -1,3 +1,8 @@
+/* Agregar al principio de tu styles.css */
+#resultado1, #resultado2, #resultado3, #resultado4, #resultado5 {
+    -fx-font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "EmojiOne Color", sans-serif;
+}
+
 .colecciones {
     -fx-font-size: 20px;
     -fx-font-weight: bold;
@@ -6,7 +11,7 @@
 #pantalla {
     -fx-background-image: url("images/fondo2.jpg");
     -fx-background-repeat: no-repeat;
-    -fx-background-size: cover;   /* Ajusta la imagen al tamaño del nodo */
+    -fx-background-size: cover;
     -fx-background-position: center center;
 }
 

@@ -9,6 +9,7 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
 <VBox fx:id="pantalla" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       stylesheets="@styles.css"
       fx:controller="org.example.carreracochesinterfaz.Controladores.ControladorCarrera">
@@ -16,9 +17,34 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
+    <HBox spacing="20" alignment="CENTER">
+        <Label text="Gameboy color: " style="-fx-font-size:25; -fx-font-weight: size; -fx-font-weight: bold;
+        -fx-text-fill: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 );"/>
+        <Button fx:id="btn_naranja" onAction="#colorNaranja" style="-fx-border-radius: 100;
+        -fx-font-size: 20; -fx-background-radius: 100; -fx-cursor: hand;
+        -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 ); -fx-background-color: orange;"
+        prefWidth="50" prefHeight="50" maxWidth="50" maxHeight="50"/>
+        <Button fx:id="btn_azul" onAction="#colorAzul" style="-fx-border-radius: 100;
+        -fx-font-size: 20; -fx-background-radius: 100; -fx-font-weight: bold; -fx-cursor: hand;
+        -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 ); -fx-background-color: blue;"
+        prefWidth="50" prefHeight="50" maxWidth="50" maxHeight="50"/>
+        <Button fx:id="btn_verde" onAction="#colorVerde" style="-fx-border-radius: 100;
+        -fx-font-size: 20; -fx-background-radius: 100; -fx-font-weight: bold; -fx-cursor: hand;
+        -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 ); -fx-background-color: green;"
+        prefWidth="50" prefHeight="50" maxWidth="50" maxHeight="50"/>
+        <Button fx:id="btn_amarillo" onAction="#colorAmarillo" style="-fx-border-radius: 100;
+        -fx-font-size: 20; -fx-background-radius: 100; -fx-font-weight: bold; -fx-cursor: hand;
+        -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 ); -fx-background-color: yellow;"
+        prefWidth="50" prefHeight="50" maxWidth="50" maxHeight="50"/>
+        <Button fx:id="btn_rojo" onAction="#colorRojo" style="-fx-border-radius: 100;
+        -fx-font-size: 20; -fx-background-radius: 100; -fx-font-weight: bold; -fx-cursor: hand;
+        -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 ); -fx-background-color: red;"
+        prefWidth="50" prefHeight="50" maxWidth="50" maxHeight="50"/>
+    </HBox>
+
     <VBox fx:id="consola" style="-fx-background-color: orange; -fx-background-radius: 25; -fx-border-radius: 20;
-            -fx-border-width: 5; -fx-border-color: black;" prefWidth="800" maxWidth="800"
-          prefHeight="850" maxHeight="850" alignment="CENTER" spacing="20">
+            -fx-border-width: 5; -fx-border-color: black; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 );"
+          prefWidth="800" maxWidth="800" prefHeight="800" maxHeight="800" alignment="CENTER" spacing="20">
         <padding>
             <Insets top="20" right="20" bottom="20" left="20"/>
         </padding>
@@ -32,11 +58,11 @@
                 <Insets top="20" right="20" bottom="20" left="20"/>
             </padding>
 
-            <!-- Columnas que hacen la matriz que conforman las pistas, el recorrido que se va a realizar en la carrera -->
+            <!-- Matriz de la pantalla de la consola, formada por estas 3 columnas -->
             <columnConstraints>
-                <ColumnConstraints minWidth="150" prefWidth="150"/> <!-- Columna para nombres -->
-                <ColumnConstraints minWidth="600" prefWidth="600"/> <!-- Columna para recorrido -->
-                <ColumnConstraints minWidth="150" prefWidth="150"/>  <!-- Columna para meta -->
+                <ColumnConstraints minWidth="150" prefWidth="150" halignment="CENTER"/> <!-- Columna para nombres -->
+                <ColumnConstraints minWidth="600" prefWidth="600" halignment="LEFT"/> <!-- Columna para recorrido -->
+                <ColumnConstraints minWidth="150" prefWidth="150" halignment="CENTER"/>  <!-- Columna para meta -->
             </columnConstraints>
 
             <!-- Fila de la SALIDA | PISTA | POSICIÓN -->
@@ -53,7 +79,7 @@
                     <Image url="@images/mario.jpg" />
                 </image>
             </ImageView>
-            <Label fx:id="recorrido1" style="-fx-text-fill: red; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label fx:id="recorrido1" alignment="CENTER" style="-fx-text-fill: red; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
             <Label fx:id="resultado1" alignment="CENTER" style="-fx-text-fill: red; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
 
 
@@ -63,7 +89,7 @@
                     <Image url="@images/luigi.jpg" />
                 </image>
             </ImageView>
-            <Label fx:id="recorrido2" style="-fx-text-fill: green; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label fx:id="recorrido2" alignment="CENTER" style="-fx-text-fill: green; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
             <Label fx:id="resultado2" alignment="CENTER" style="-fx-text-fill: green; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
 
             <!-- =============== Corredor 3: Bowser =============== -->
@@ -72,7 +98,7 @@
                     <Image url="@images/bowser.jpg" />
                 </image>
             </ImageView>
-            <Label fx:id="recorrido3" style="-fx-text-fill: purple; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label fx:id="recorrido3" alignment="CENTER" style="-fx-text-fill: purple; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
             <Label fx:id="resultado3" alignment="CENTER" style="-fx-text-fill: purple; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
 
             <!-- =============== Corredor 4: Toad =============== -->
@@ -81,7 +107,7 @@
                     <Image url="@images/toad.jpg" />
                 </image>
             </ImageView>
-            <Label fx:id="recorrido4" style="-fx-text-fill: blue; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Label fx:id="recorrido4" alignment="CENTER" style="-fx-text-fill: blue; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
             <Label fx:id="resultado4" alignment="CENTER" style="-fx-text-fill: blue; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
 
             <!-- =============== Corredor 5: Peach =============== -->
@@ -90,21 +116,25 @@
                     <Image url="@images/peach.jpg" />
                 </image>
             </ImageView>
-            <Label fx:id="recorrido5" style="-fx-text-fill: pink; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            <Label fx:id="recorrido5" alignment="CENTER" style="-fx-text-fill: pink; -fx-font-size: 25;" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
             <Label fx:id="resultado5" alignment="CENTER" style="-fx-text-fill: pink; -fx-font-size: 50;" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
 
         </GridPane>
 
-        <VBox alignment="BOTTOM_RIGHT" style="-fx-padding: 0 150 0 0 0">
-            <Button fx:id="btn_salir" text="B" prefWidth="70" prefHeight="70" maxWidth="70" maxHeight="70" onAction="#salirDelPrograma"
-                    alignment="CENTER" style="-fx-border-radius: 100; -fx-font-size: 20; -fx-background-color:red;
-                     -fx-text-fill: white; -fx-background-radius: 100; -fx-font-weight: bold; -fx-cursor: hand;"/>
-        </VBox>
-        <VBox alignment="BOTTOM_RIGHT" style="-fx-padding: 0 200 0 0 0">
-            <Button fx:id="btn_iniciar" text="A" prefWidth="70" prefHeight="70" maxWidth="70" maxHeight="70" onAction="#iniciar"
+
+        <HBox alignment="CENTER" spacing="20">
+
+            <!-- Botón para inicar la carrera -->
+            <Button fx:id="btn_iniciar" text="INICIO" prefWidth="300" prefHeight="70" maxWidth="300" maxHeight="70" onAction="#iniciar"
                     alignment="CENTER" style="-fx-border-radius: 100; -fx-font-size: 20; -fx-background-radius: 100;
-                    -fx-font-weight: bold; -fx-cursor: hand;"/>
-        </VBox>
+                    -fx-font-weight: bold; -fx-cursor: hand; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 );"/>
+
+            <!-- Botón para salir del programa -->
+            <Button fx:id="btn_salir" text="SALIR" prefWidth="300" prefHeight="70" maxWidth="300" maxHeight="70" onAction="#salirDelPrograma"
+                    alignment="CENTER" style="-fx-border-radius: 100; -fx-font-size: 20; -fx-background-color:gray;
+                     -fx-text-fill: white; -fx-background-radius: 100; -fx-font-weight: bold; -fx-cursor: hand;
+                     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 8, 0.5 , 5 , 5 );"/>
+        </HBox>
 
     </VBox>
 

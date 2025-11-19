@@ -63,14 +63,33 @@ public class Coche extends Thread {
 
         // Notificar finalización
         Platform.runLater(() -> {
-            recorridoEnCarrera.setText(String.join("", carretera) + " " + this.nombre + " ¡LLEGÓ!");
+            recorridoEnCarrera.setText(String.join("", carretera) + " " + this.nombre + " terminó");
 
-            resultado.setText(String.valueOf(carrera.ordenDeLlegada(this.nombre, velocidadMaxima)) + "º");
+            switch (carrera.ordenDeLlegada(this.nombre, velocidadMaxima)) {
+                case 1:
+                    resultado.setText("🏆");
+                    recorridoEnCarrera.setText(this.nombre.toUpperCase() + " A GANADO");
+                    resultado.setStyle("-fx-background-color: yellow; -fx-text-fill: black; -fx-border-radius: 10;" +
+                            "-fx-background-radius: 10; -fx-font-size: 40; -fx-padding: 10;");
+                    break;
+                case 2:
+                    resultado.setText("2º");
+                    break;
+                case 3:
+                    resultado.setText("3º");
+                    break;
+                case 4:
+                    resultado.setText("4º");
+                    break;
+                case 5:
+                    resultado.setText("5º");
+                    break;
+            }
         });
 
     }
 
-    // Actualiza la interfaz gráfica de forma segura desde un Thread
+    // Actualiza la interfaz gráfica sin errores desde un Thread
     private void actualizarJavafx() {
         Platform.runLater(() -> {
             String avance = String.join("", carretera);
