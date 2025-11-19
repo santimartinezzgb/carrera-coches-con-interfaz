@@ -11,9 +11,10 @@
 #pantalla {
     -fx-background-image: url("images/fondo2.jpg");
     -fx-background-repeat: no-repeat;
-    -fx-background-size: cover;
+    -fx-background-size: 1920 1080;
     -fx-background-position: center center;
 }
+
 
 
 #pantalla_carrera{

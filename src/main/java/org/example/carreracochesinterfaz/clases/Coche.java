@@ -69,8 +69,7 @@ public class Coche extends Thread {
                 case 1:
                     resultado.setText("🏆");
                     recorridoEnCarrera.setText(this.nombre.toUpperCase() + " A GANADO");
-                    resultado.setStyle("-fx-background-color: yellow; -fx-text-fill: black; -fx-border-radius: 10;" +
-                            "-fx-background-radius: 10; -fx-font-size: 40; -fx-padding: 10;");
+                    resultado.setStyle("-fx-text-fill: black; -fx-font-size: 40; -fx-padding: 10;");
                     break;
                 case 2:
                     resultado.setText("2º");

@@ -94,6 +94,76 @@
         \end{tcolorbox}
 
 
+    % ========================== IMÁGENES DEL PROGRAMA ==========================
+    \newpage
+    \section{Pantallas del programa}
+
+        \subsection{Pantalla al iniciar}
+
+            Es la primera imagen al abir el programa, en la cual se puede apreciar la temática sobre el mundo de Super Mario.
+
+            \vspace{0.5cm}
+            En esta pantalla se muestra una matriz formada por tres columnas
+
+            \begin{itemize}
+                \item \textbf{Salida:} Con cada corredor en una fila.
+                \item \textbf{Pista:} Donde se producirá de manera visual el avance de cada uno de los corredores.
+                \item \textbf{Resultados:} Aparecerá el puesto en el que finaliza la carrera cada uno de los pilotos.
+            \end{itemize}
+
+
+            \begin{figure}[!h]
+                \begin{center}
+                    \includegraphics[height=9cm]{images/pantalla-inicio.png}
+                    \caption{Pantalla inicial}
+                \end{center}
+            \end{figure}
+            Se puede observar en la parte superior de la pantalla, que el jugador tiene la posibilidad de poder cambiar el color de la consola. Esta funcionalidad se puede aplicar en cualquier momento de ejecución del programa.
+
+        \newpage
+        \subsection{Pantalla durante la carrera}
+            
+            En esta pantalla es en la que se está produciendo la carrera entre los 5 corredores.
+
+            \begin{enumerate}
+                \item Click en el botón \textbf{INICIO}
+                \item Los botones de inicio y de salir (el cual sale del programa), a través del controlador con un setDisable(true), se vuelve inaccesible para evitar interrupciones en los procesos, y cambia su texto a \textbf{CORRIENDO...}
+                
+                \vspace{0.5cm}
+                En ese momento los hilos están siendo ejecutados por el procesador.
+            \end{enumerate}
+            \begin{figure}[!h]
+                \begin{center}
+                    \includegraphics[height=9cm]{images/pantalla-durante-carrera.png}
+                    \caption{Pantalla durante la carrera}
+                \end{center}
+            \end{figure}
+
+            Cada corredor tiene un color de pista diferente, esto es para que se pueda diferenciar correctamente el trayecto que sigue cada cual. La selección de colores va acorde con el color principal del corredor.
+
+        \newpage
+        \subsection{Pantalla al finalizar la carrera}
+
+            La carrera ha terminado. Como se puede apreciar en la imagen, al corredor que termina en 1ª posición, le aparece el texto de ganador junto con una copa en la columna resultado.
+
+            \vspace{0.5cm}
+            En la columna resultados de los demás corredores se observa la posición en la que han quedado en la carrera.
+
+            \begin{figure}[!h]
+                \begin{center}
+                    \includegraphics[height=9cm]{images/pantalla-terminada.png}
+                    \caption{Pantalla al finalizar la carrera}
+                \end{center}
+            \end{figure}
+
+            \begin{tcolorbox}[colback=green!3!white,colframe=blue!60!black,fonttitle=\bfseries]
+                Técnicamente hablando, el hilo que finaliza primero, otorga el primer puesto en carrera a la instancia de coche asignada a ese hilo.
+            \end{tcolorbox}
+
+            Una vez finalizado el proceso, ambos botones vuelven a estar disponibles, gracias a que en el controlador se vuelve a utilizar el setDisable() pero con el booleano false, devolviendo el acceso a sus pertinentes acciones.
+
+
+
     % ========================== DESCRIPCIÓN TÉCNICA ==========================
     \newpage
     \section{Uso del synchronized}
