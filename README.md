@@ -9,13 +9,16 @@ Simulador de carreras entre cinco personajes icónicos del universo Mario Kart: 
 ## Pantallas
 
 - **Inicio**: Vista previa con todos los corredores en la línea de salida
-  <img width="1917" height="1014" alt="pantalla-inicio" src="https://github.com/user-attachments/assets/bf950f6e-bb17-4483-b871-fa045d9be648" />
+  
+  <img width="1717" height="914" alt="pantalla-inicio" src="https://github.com/user-attachments/assets/bf950f6e-bb17-4483-b871-fa045d9be648" />
 
 - **Carrera**: Visualización en tiempo real del avance de cada participante
-  <img width="1917" height="1014" alt="pantalla-durante-carrera" src="https://github.com/user-attachments/assets/c72dfafc-b8ea-4cef-92e3-cbe80dad4cc2" />
+  
+  <img width="1717" height="914" alt="pantalla-durante-carrera" src="https://github.com/user-attachments/assets/c72dfafc-b8ea-4cef-92e3-cbe80dad4cc2" />
 
 - **Finalización**: Clasificación final con el ganador destacado 🏆
-  <img width="1917" height="1014" alt="pantalla-terminada" src="https://github.com/user-attachments/assets/3c92155a-13d8-4862-b6bf-a34f80105f8c" />
+  
+  <img width="1717" height="914" alt="pantalla-terminada" src="https://github.com/user-attachments/assets/3c92155a-13d8-4862-b6bf-a34f80105f8c" />
 
 ## Características
 
